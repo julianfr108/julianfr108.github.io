@@ -26,6 +26,7 @@ SITE = {
     "address_line1": "1135 Pearl St #207",
     "address_line2": "Boulder, CO 80302",
     "calendly_url": "https://calendly.com/astateofmind",
+    "form_endpoint": "https://script.google.com/macros/s/AKfycbyd7Q18YaKXBQMiHKZYS8Rs6l1aOchtw0nYrPVGVrhB3FnHicxCRvR7csoB78kKmDE7/exec",
 }
 
 # Testimonials data

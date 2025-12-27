@@ -128,7 +128,7 @@
         <h2>Get in Touch</h2>
         <p style="margin-bottom: 2rem;">I'd love to hear from you. Fill out the form below or use the contact information to reach out directly. I typically respond within 24-48 hours.</p>
 
-        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <form class="contact-form" id="contact-form">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
 
@@ -141,7 +141,8 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" required placeholder="Tell me a little about what brings you here..."></textarea>
 
-          <button type="submit" class="btn">Send Message</button>
+          <button type="submit" class="btn" id="submit-btn">Send Message</button>
+          <p id="form-status" style="margin-top: 1rem;"></p>
         </form>
       </div>
 
@@ -224,6 +225,54 @@
       document.querySelector('nav').classList.toggle('active');
     });
   </script>
+
+  
+<script>
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyd7Q18YaKXBQMiHKZYS8Rs6l1aOchtw0nYrPVGVrhB3FnHicxCRvR7csoB78kKmDE7/exec';
+
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById('submit-btn');
+  const status = document.getElementById('form-status');
+  const form = this;
+
+  // Disable button and show loading
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  status.textContent = '';
+  status.style.color = '';
+
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    message: form.message.value
+  };
+
+  try {
+    const response = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    // With no-cors we can't read the response, but if no error was thrown, assume success
+    status.textContent = 'Thank you! Your message has been sent. I\'ll be in touch soon.';
+    status.style.color = 'var(--primary)';
+    form.reset();
+
+  } catch (error) {
+    status.textContent = 'Sorry, there was an error sending your message. Please try emailing directly.';
+    status.style.color = '#c44';
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Send Message';
+});
+</script>
+
 
 </body>
 </html>

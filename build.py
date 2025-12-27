@@ -86,11 +86,13 @@ QUOTES = [
 PAGES = [
     {"template": "pages/index.html", "output": "index.html"},
     {"template": "pages/about.html", "output": "about.html"},
+    {"template": "pages/credentials.html", "output": "credentials.html"},
     {"template": "pages/trauma.html", "output": "trauma.html"},
     {"template": "pages/relationships.html", "output": "relationships.html"},
     {"template": "pages/psychedelic-therapy.html", "output": "psychedelic-therapy.html"},
     {"template": "pages/life-transitions.html", "output": "life-transitions.html"},
     {"template": "pages/contact.html", "output": "contact.html"},
+    {"template": "pages/faqs.html", "output": "faqs.html"},
 ]
 
 

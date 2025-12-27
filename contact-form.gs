@@ -33,3 +33,9 @@ function doPost(e) {
     })).setMimeType(ContentService.MimeType.JSON);
   }
 }
+
+function doGet(e) {
+  return ContentService.createTextOutput(
+    "Contact form endpoint. Submit via POST."
+  );
+}

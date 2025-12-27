@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}About Julian Royce | A State of Mind Counseling{% endblock %}
+{% block description %}Learn about Julian Royce, MA, LPC - trauma-informed therapist, transformational coach, and meditation teacher in Boulder, CO.{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <h1>About Julian</h1>
+    <p>Meditation Teaching, Transformational Coaching & Trauma-Informed Therapy in Boulder, CO</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <img src="images/65fdfab09c38cf4f0274f478_7fac1738b678.jpeg" alt="Julian Royce" style="border-radius: 8px;">
+      </div>
+      <div>
+        <h2>Background</h2>
+        <p>I was raised in the delightfully southern culture of North Carolina. My father is a musician from California and my mother taught yoga and body work before becoming a full time mom to me and my two brothers.</p>
+        <p>A formative memory from my teenage years: My friend Ian had a job in a bookstore. For a birthday gift, he told me I could choose any book in the store. I remember slowly walking through the aisles, looking at all the different sections. I finally came to a section and paused for a long time before choosing my book: <em>Awakening the Buddha Within</em>, by Lama Surya Das. Out of all the subjects in the world, the profound mystical & pragmatic teachings like these seemed the most valuable, the most worth reading & taking to heart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container content-page">
+    <h2>My Journey</h2>
+    <p>I began to develop a deep, life long appreciation for mysticism, philosophy, existentialism, stoicism and for the Buddhist teachings. This led me to the study & practice of meditation. I spent a year and half studying & practicing Buddhist teachings & practices in India and Nepal.</p>
+    <p>Towards the end of my time in Nepal, I completed a 100 day retreat at Nagi Gompa, a monastery famous for being the home of the late Dzogchen master Tulku Urgyen Rinpoche, widely considered to be one of the greatest meditation masters to leave Tibet when the Chinese invaded and began their campaign of cultural genocide in 1959. This monastery is on the slopes of Shiva Puri mountain, with incredible views overlooking the Kathmandu valley. It was a cold and wet winter, with lots of time to meditate amidst the bustle and warm hearted monks, nuns & yogis.</p>
+    <p>I earned a Masters in Indo-Tibetan Buddhist Studies and have taught meditation and mindfulness in various contexts, including the college classroom and at both middle and high schools.</p>
+    <p>Later in life I returned to school to earn a Masters in Clinical Psychology, in order to better serve and help people to live inspired, vibrant lives, and more aligned with their highest values.</p>
+    <p>Today I hold a non sectarian perspective that seeks to honor the wisdom of many traditions & teachings, including that of Christianity & the West, and I hope to contribute to the integration of our human knowledge, collective peace and fundamental aliveness.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="two-col reverse">
+      <div>
+        <img src="images/65bab49a956a3409e8c22cf4_03bf41e1cea5.png" alt="Boulder mountains" style="border-radius: 8px;">
+      </div>
+      <div>
+        <h2>Why I Became a Therapist</h2>
+        <p>Despite living in the wealthiest society in recorded history, many of us today are beset by anxiety, depression and a lack of meaning and connection.</p>
+        <p>I want to help you in your journey of healing, growth, transformation and to deepen your connection with this big world and to live the life you are built to be living.</p>
+
+        <h2>My Approach to Therapy</h2>
+        <p>Mindfulness is foundational to the work that I do.</p>
+        <p>One of my goals is to give you tools, skills and perspectives that you can take with you and use for the rest of your life.</p>
+        <p>I offer a variety of approaches to bring greater awareness and more skillful action to our lives, including Breath Work, Meditative practices that are accessible to everyone, and specific ways of working directly with the nervous system to create the foundation for long term health, happiness and well being.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-cream">
+  <div class="container content-page">
+    <h2>What Therapy Can Look Like</h2>
+    <p>Therapy is a very individualized process and does not look the same way for everyone. Depending on what is needed, therapy can involve:</p>
+    <ul>
+      <li>Processing and healing past traumas that were overwhelming at the time</li>
+      <li>Support to stay in recovery from addiction</li>
+      <li>Learning new ways to communicate and deepen intimacy and connection</li>
+      <li>Receiving support to live a life of greater happiness, well being and inspiration</li>
+    </ul>
+
+    <h2>What I Like to Do for Fun</h2>
+    <p>I love to be outside with my dog Sailor Moon, roaming the trails and mountains around Boulder, Colorado.</p>
+    <p>I love to go skiing, the practice of dance (especially Ecstatic Dance), and I have had a consistent meditation practice for 22 years.</p>
+    <p>I also enjoy DJing & playing guitar at events and gatherings.</p>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container content-page">
+    <h2>Quotes I Find Inspiring</h2>
+    {% for quote in quotes %}
+    <blockquote>
+      <p>"{{ quote.text }}"</p>
+      <footer>— {{ quote.author }}</footer>
+    </blockquote>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

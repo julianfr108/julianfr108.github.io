@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title %}A State of Mind Counseling | Therapy in Boulder, CO{% endblock %}
+{% block description %}Julian Royce, MA, LPC offers trauma-informed therapy, transformational coaching, and meditation teaching in Boulder, CO and online throughout Colorado.{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-mountains"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1>You're ready for something to change.<br>I'm here to help you get there.</h1>
+      <p style="font-size: 1.15rem; font-weight: 500; color: var(--primary); margin-bottom: 1rem;">Depth-oriented therapy for clarity, confidence, and aligned action.</p>
+      <a href="https://calendly.com/astateofmind" class="btn" target="_blank">Schedule A Free Consultation</a>
+      <div style="margin-top: 3rem;">
+        <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Find Inner peace, and</h2>
+        <h2 style="font-size: 1.6rem; font-weight: 600;">build a life you love</h2>
+        <p style="margin-top: 1rem; font-size: 1.1rem;">Therapy in Boulder, and across Colorado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+    <div class="two-col">
+      <div class="bio-content">
+        <h3>Julian Royce</h3>
+        <p class="credentials">MA, LPC</p>
+        <div class="divider"></div>
+        <p>Despite living in the wealthiest society in recorded history, many of us today are beset by anxiety, depression and lack of meaning and connection.</p>
+        <p>I became a trauma informed therapist, transformational coach & meditation teacher to help people to heal and to rediscover their connection with the greater world and to live the lives they are meant to be living during our brief time on this planet.</p>
+        <p>Having seen the healing and transformative power of therapy, in helping people heal from trauma, build healthy relationships, ease anxiety, and build a life that brings them joy, I know that this is possible for you as well.</p>
+        <p>Schedule a free consultation by clicking the button below, and we can see how I might be able to help. I hope I get the chance to meet you!</p>
+      </div>
+      <div class="bio-image">
+        <img src="images/65fdfab09c38cf4f0274f478_7fac1738b678.jpeg" alt="Julian Royce, Therapist">
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <a href="about.html" class="btn">More About Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="specialties">
+  <div class="container">
+    <div class="section-header">
+      <h2>Specialties</h2>
+      <div class="divider" style="margin: 1.5rem auto;"></div>
+    </div>
+    <div class="specialties-grid">
+      <a href="trauma.html" class="specialty-card">
+        <img src="images/65cc1ae0190e876e7ded4590_2fd19efea77b.png" alt="Trauma Therapy">
+        <h3>Trauma</h3>
+        <p>Process and heal from past experiences that have been holding you back. Find freedom from anxiety, reactivity, and emotional overwhelm.</p>
+      </a>
+      <a href="relationships.html" class="specialty-card">
+        <img src="images/65cc1ae4a4bca44eccf3cd47_cb8379bddc52.png" alt="Relationship Therapy">
+        <h3>Relationships</h3>
+        <p>Build deeper connections, improve communication, and create fulfilling relationships with yourself and others.</p>
+      </a>
+      <a href="psychedelic-therapy.html" class="specialty-card">
+        <img src="images/65cc1599c8ab65794eab9b74_3a63a99f5c27.webp" alt="Psychedelic Therapy">
+        <h3>Psychedelic Therapy</h3>
+        <p>Explore the transformative potential of psychedelic-assisted therapy for profound healing and personal growth.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-cream">
+  <div class="container">
+    <div class="section-header">
+      <h2>You can find inner harmony</h2>
+      <div class="divider" style="margin: 1.5rem auto;"></div>
+      <p style="font-size: 1.15rem;">You can begin to create a life free from repeating your personal, familial & collective traumas; a life filled with fulfilling relationships, access to your inner wisdom, cultivating genuine happiness & giving your gifts to this world that so desperately needs them.</p>
+      <p style="font-size: 1.15rem; margin-top: 1.5rem;">This is possible for you, and I would love to walk alongside as you make this a reality.</p>
+      <a href="https://calendly.com/astateofmind" class="btn" target="_blank" style="margin-top: 2rem;">Schedule A Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Client Testimonials</h2>
+      <div class="divider" style="margin: 1.5rem auto;"></div>
+    </div>
+    <div class="testimonials-grid">
+      {% for testimonial in testimonials %}
+      <div class="testimonial">
+        <p>"{{ testimonial.quote }}"</p>
+        <p class="testimonial-author">{{ testimonial.author }}</p>
+        <p class="testimonial-date">{{ testimonial.date }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

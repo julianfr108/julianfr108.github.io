@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}A State of Mind Counseling{% endblock %}</title>
+  <meta name="description" content="{% block description %}Julian Royce, MA, LPC offers trauma-informed therapy, transformational coaching, and meditation teaching in Boulder, CO and online throughout Colorado.{% endblock %}">
+  <link rel="stylesheet" href="css/style.css">
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+
+  {% include 'partials/header.html' %}
+
+  {% block content %}{% endblock %}
+
+  {% block cta %}
+  {% include 'partials/cta.html' %}
+  {% endblock %}
+
+  {% include 'partials/footer.html' %}
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

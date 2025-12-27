@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | A State of Mind Counseling</title>
+  <meta name="description" content="Contact Julian Royce, LPC for therapy services in Boulder, CO. Schedule a free 15-minute consultation.">
+  <link rel="stylesheet" href="css/style.css">
+  
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  .contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  .contact-details {
+    background: var(--off-white);
+    padding: 40px;
+    border-radius: 8px;
+  }
+  .contact-details h3 {
+    margin-bottom: 1.5rem;
+  }
+  .contact-item-large {
+    margin-bottom: 25px;
+  }
+  .contact-item-large h4 {
+    margin-bottom: 5px;
+    color: var(--primary);
+  }
+  .contact-item-large p,
+  .contact-item-large a {
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  .map-container {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+  }
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <header>
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/65baa6f9956a349e3ac222c5_c1b53a092e17.png" alt="A State of Mind Counseling">
+      <span class="logo-text">A State of Mind Counseling</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav>
+      <ul>
+        <li class="has-dropdown">
+          <a href="about.html">About</a>
+          <ul class="dropdown">
+            <li><a href="about.html">About Julian</a></li>
+            <li><a href="about.html#credentials">Credentials</a></li>
+          </ul>
+        </li>
+        <li><a href="psychedelic-therapy.html">Psychedelic Therapy</a></li>
+        <li class="has-dropdown">
+          <a href="index.html#specialties">Specialties</a>
+          <ul class="dropdown">
+            <li><a href="trauma.html">Trauma</a></li>
+            <li><a href="relationships.html">Relationships</a></li>
+            <li><a href="life-transitions.html">Life Transitions</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://calendly.com/astateofmind" class="btn" target="_blank">Book Consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  
+<div class="page-header">
+  <div class="container">
+    <h1>Contact</h1>
+    <p>Reach out to schedule a free 15-minute consultation</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h2>Get in Touch</h2>
+        <p style="margin-bottom: 2rem;">I'd love to hear from you. Fill out the form below or use the contact information to reach out directly. I typically respond within 24-48 hours.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell me a little about what brings you here..."></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-details">
+        <h3>Contact Information</h3>
+
+        <div class="contact-item-large">
+          <h4>Phone</h4>
+          <p><a href="tel:3034166116">(303) 416-6116</a></p>
+        </div>
+
+        <div class="contact-item-large">
+          <h4>Email</h4>
+          <p><a href="mailto:astateofmindcounsel@gmail.com">astateofmindcounsel@gmail.com</a></p>
+        </div>
+
+        <div class="contact-item-large">
+          <h4>Office Location</h4>
+          <p>1135 Pearl St #207<br>Boulder, CO 80302</p>
+        </div>
+
+        <div class="contact-item-large">
+          <h4>Schedule Online</h4>
+          <p><a href="https://calendly.com/astateofmind" target="_blank" class="btn" style="margin-top: 10px;">Book Free Consultation</a></p>
+        </div>
+
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.8!2d-105.28!3d40.019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1135+Pearl+St+%23207%2C+Boulder%2C+CO+80302!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container" style="text-align: center; max-width: 700px;">
+    <h2>What to Expect</h2>
+    <p>When you reach out, we'll schedule a free 15-20 minute consultation call. This gives us a chance to connect, discuss what you're looking for, and determine if we'd be a good fit to work together.</p>
+    <p>There's no pressure and no commitment - just an opportunity to ask questions and see if therapy with me feels right for you.</p>
+  </div>
+</section>
+
+
+  
+
+  <footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>A State of Mind Counseling</h3>
+        <p>Therapy practice offering therapy and counseling services in Boulder & online throughout Colorado.</p>
+        <p style="margin-top: 1rem;"><strong>Julian Royce, MA, LPC #76277</strong><br>Licensed Professional Counselor</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Julian</a></li>
+          <li><a href="trauma.html">Trauma Therapy</a></li>
+          <li><a href="relationships.html">Relationships</a></li>
+          <li><a href="psychedelic-therapy.html">Psychedelic Therapy</a></li>
+          <li><a href="life-transitions.html">Life Transitions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>1135 Pearl St #207<br>Boulder, CO 80302</p>
+        <p><a href="tel:3034166116">(303) 416-6116</a></p>
+        <p><a href="mailto:astateofmindcounsel@gmail.com">astateofmindcounsel@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Julian Royce. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

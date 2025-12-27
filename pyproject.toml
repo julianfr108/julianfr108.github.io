@@ -1,0 +1,11 @@
+[project]
+name = "astateofmind-site"
+version = "0.1.0"
+description = "Static site generator for A State of Mind Counseling"
+requires-python = ">=3.10"
+dependencies = [
+    "jinja2",
+]
+
+[project.scripts]
+build = "build:build"

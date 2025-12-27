@@ -128,7 +128,7 @@ img {
 /* Header / Navigation */
 header {
   background: var(--white);
-  padding: 20px 0;
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -147,7 +147,7 @@ header {
 }
 
 .logo img {
-  height: 70px;
+  height: 60px;
   width: auto;
 }
 
@@ -155,16 +155,22 @@ header {
   display: none; /* Logo image includes the text */
 }
 
-nav ul {
+nav > ul {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 25px;
   align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul > li {
+  position: relative;
 }
 
 nav a {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--primary);
   padding: 8px 0;
@@ -181,6 +187,50 @@ nav .btn {
   font-size: 0.95rem;
 }
 
+/* Dropdown Menu - Pure CSS */
+.has-dropdown > a::after {
+  content: ' ▾';
+  font-size: 0.7em;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  min-width: 200px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.has-dropdown:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown li {
+  padding: 0;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.dropdown a:hover {
+  background: var(--off-white);
+  color: var(--primary);
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -190,17 +240,16 @@ nav .btn {
   color: var(--primary);
 }
 
-/* Hero Section */
+/* Hero Section with Parallax & Animated Sky */
 .hero {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 85vh;
+  position: relative;
+  min-height: 90vh;
   display: flex;
   align-items: center;
-  position: relative;
+  overflow: hidden;
 }
 
+/* Animated sky background */
 .hero::before {
   content: '';
   position: absolute;
@@ -208,12 +257,65 @@ nav .btn {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.6) 100%);
+  background: linear-gradient(180deg,
+    #87CEEB 0%,
+    #B0E0E6 30%,
+    #E0F4FF 60%,
+    #ffffff 100%);
+  z-index: 0;
+}
+
+/* Animated clouds */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 60%;
+  background-image:
+    radial-gradient(ellipse 100px 60px at 10% 20%, rgba(255,255,255,0.8) 0%, transparent 70%),
+    radial-gradient(ellipse 150px 80px at 30% 35%, rgba(255,255,255,0.7) 0%, transparent 70%),
+    radial-gradient(ellipse 120px 50px at 60% 15%, rgba(255,255,255,0.9) 0%, transparent 70%),
+    radial-gradient(ellipse 180px 70px at 80% 30%, rgba(255,255,255,0.6) 0%, transparent 70%),
+    radial-gradient(ellipse 100px 50px at 95% 20%, rgba(255,255,255,0.8) 0%, transparent 70%);
+  animation: moveClouds 60s linear infinite;
+  z-index: 1;
+}
+
+@keyframes moveClouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Mountains - fixed parallax background */
+.hero-mountains {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: url('../images/65bab29e63440bb35ceef19c_a5a91cb61e49.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  z-index: 2;
+}
+
+/* Content overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0.5) 100%);
+  z-index: 3;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 4;
   max-width: 650px;
 }
 
